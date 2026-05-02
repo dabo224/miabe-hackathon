@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#e2e7ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#4ae176",
+                    "tertiary-fixed": "#ffe083",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#283044",
+                    "background": "#faf8ff",
+                    "on-primary-fixed-variant": "#005321",
+                    "outline-variant": "#bccbb9",
+                    "surface-dim": "#d2d9f4",
+                    "primary-container": "#22c55e",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#2b6954",
+                    "on-tertiary-container": "#4f3e00",
+                    "on-error": "#ffffff",
+                    "outline": "#6d7b6c",
+                    "surface-variant": "#dae2fd",
+                    "on-secondary-fixed-variant": "#0b513d",
+                    "surface-bright": "#faf8ff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#adedd3",
+                    "surface": "#faf8ff",
+                    "on-surface-variant": "#3d4a3d",
+                    "on-background": "#131b2e",
+                    "secondary-fixed-dim": "#95d3ba",
+                    "secondary-fixed": "#b0f0d6",
+                    "tertiary-fixed-dim": "#eec200",
+                    "surface-container-low": "#f2f3ff",
+                    "on-primary-fixed": "#002109",
+                    "tertiary-container": "#cfa800",
+                    "surface-container-highest": "#dae2fd",
+                    "on-secondary-container": "#306d58",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#006e2f",
+                    "tertiary": "#735c00",
+                    "primary": "#006e2f",
+                    "on-surface": "#131b2e",
+                    "on-secondary-fixed": "#002117",
+                    "surface-container": "#eaedff",
+                    "primary-fixed-dim": "#4ae176",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#6bff8f",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eef0ff",
+                    "on-tertiary-fixed": "#231b00",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "on-primary-container": "#004b1e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-main": "1.5rem",
+                    "stack-gap-md": "1rem",
+                    "stack-gap-sm": "0.5rem",
+                    "stack-gap-lg": "2rem",
+                    "gutter-grid": "1rem",
+                    "touch-target-min": "3.5rem"
+            },
+            "fontFamily": {
+                    "label-lg": ["Plus Jakarta Sans"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "800"}],
+                    "headline-md": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                    "headline-sm": ["20px", {"lineHeight": "26px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #faf8ff;
+            color: #131b2e;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 h-16 bg-white dark:bg-slate-950 border-b-2 border-slate-900 dark:border-slate-50 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
+<div class="flex items-center gap-4">
+<button class="active:translate-y-0.5 active:translate-x-0.5 transition-all">
+<span class="material-symbols-outlined text-[#22C55E]" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-extrabold uppercase tracking-wider text-lg text-slate-900 dark:text-white">Health Registration</h1>
+</div>
+<button class="active:translate-y-0.5 active:translate-x-0.5 transition-all">
+<span class="material-symbols-outlined text-[#22C55E]" data-icon="sync">sync</span>
+</button>
+</header>
+<main class="pt-24 pb-32 px-margin-main flex flex-col gap-stack-lg min-h-screen max-w-md mx-auto">
+<!-- Step Indicator -->
+<div class="flex items-center gap-2">
+<div class="flex-1 h-3 bg-[#22C55E] border-2 border-slate-900 rounded-full"></div>
+<div class="flex-1 h-3 bg-surface-container border-2 border-slate-900 rounded-full"></div>
+<div class="flex-1 h-3 bg-surface-container border-2 border-slate-900 rounded-full"></div>
+<span class="font-label-sm text-label-sm ml-2">STEP 1/3</span>
+</div>
+<section class="flex flex-col gap-stack-md">
+<h2 class="font-headline-lg text-headline-lg text-slate-900">Parent Details</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Register the primary guardian for the household record.</p>
+</section>
+<!-- Image Reference Section -->
+<div class="relative w-full aspect-video border-2 border-slate-900 rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="A professional, high-contrast close-up of a digital tablet scanning a national identity card in a bright, outdoor clinic setting. The scene is illuminated by crisp, natural Guinea sunlight, emphasizing clear textures and vibrant greens of the surrounding environment. The UI elements on the tablet screen are bold and legible, matching a professional healthcare app aesthetic. The mood is efficient and high-tech, yet grounded in a real-world community health context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuyOAljS7U-m4vocWdGj-4OdVLdT5qnWZYYqkt6aa2ZfnTdjzLWubMSH2aetLDvW4tUhHxbO0kGbw-wJDuYuA3tNlsE208nJeQ0T4PbJRW1cNGiIhpPXKKb3LUAQuOkkRKsK_K4Tr2lfLamYopQCdkD_jcBzXRRu113brkCZhvjQYBCXFxEffiuctRceqcBFonSYe0IHMgRU4D662-wJyLDGUMry8rJAaJWrc1WdT9VF7vfWpsayFntSWMY27vqTFESSbJ4_ZdYzI"/>
+<div class="absolute inset-0 bg-slate-900/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
+</div>
+</div>
+<!-- Scan Action -->
+<button class="w-full h-touch-target-min bg-[#22C55E] text-slate-900 border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] active:translate-y-1 active:translate-x-1 active:shadow-none transition-all flex items-center justify-center gap-3">
+<span class="material-symbols-outlined font-black" data-icon="document_scanner">document_scanner</span>
+<span class="font-['Plus_Jakarta_Sans'] font-extrabold text-lg uppercase">Scan National ID</span>
+</button>
+<div class="flex items-center gap-4 py-2">
+<div class="flex-1 h-px bg-slate-300"></div>
+<span class="font-label-sm text-label-sm text-slate-500 uppercase">Or Manual Entry</span>
+<div class="flex-1 h-px bg-slate-300"></div>
+</div>
+<!-- Manual Form -->
+<div class="flex flex-col gap-stack-md">
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg uppercase text-slate-900">Full Name</label>
+<input class="w-full h-14 px-4 bg-white border-2 border-slate-900 rounded-lg focus:outline-none focus:border-[#22C55E] focus:ring-2 focus:ring-[#22C55E] font-body-md" placeholder="Enter parent's full name" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg uppercase text-slate-900">National ID Number</label>
+<input class="w-full h-14 px-4 bg-white border-2 border-slate-900 rounded-lg focus:outline-none focus:border-[#22C55E] focus:ring-2 focus:ring-[#22C55E] font-body-md" placeholder="000-0000-0000-00" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg uppercase text-slate-900">Phone Number</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 font-bold text-slate-500">+224</span>
+<input class="w-full h-14 pl-16 pr-4 bg-white border-2 border-slate-900 rounded-lg focus:outline-none focus:border-[#22C55E] focus:ring-2 focus:ring-[#22C55E] font-body-md" placeholder="600 00 00 00" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Fixed Bottom Action Bar -->
+<div class="fixed bottom-20 left-0 w-full p-margin-main bg-white/80 backdrop-blur-md border-t-2 border-slate-900/10">
+<a class="w-full h-touch-target-min bg-[#22C55E] text-slate-900 border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] active:translate-y-1 active:translate-x-1 active:shadow-none transition-all flex items-center justify-center gap-2" href="{{DATA:SCREEN:SCREEN_11}}">
+<span class="font-['Plus_Jakarta_Sans'] font-black text-xl uppercase">Next Step</span>
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-20 bg-white dark:bg-slate-950 border-t-2 border-slate-900 dark:border-slate-50">
+<a class="flex flex-col items-center justify-center text-slate-900 dark:text-slate-400 px-4 py-1 active:scale-95 transition-transform" href="{{DATA:SCREEN:SCREEN_8}}">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[12px] font-bold uppercase">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-900 dark:text-slate-400 px-4 py-1 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[12px] font-bold uppercase">Patients</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#22C55E] text-slate-900 border-2 border-slate-900 rounded-lg px-4 py-1 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[12px] font-bold uppercase">Register</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-900 dark:text-slate-400 px-4 py-1 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="sync">sync</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[12px] font-bold uppercase">Sync</span>
+</a>
+</nav>
+</body></html>

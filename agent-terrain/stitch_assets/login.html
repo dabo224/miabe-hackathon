@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agent Terrain - Secure Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#4ae176",
+                    "surface-container-low": "#f2f3ff",
+                    "on-primary-fixed-variant": "#005321",
+                    "tertiary-fixed": "#ffe083",
+                    "tertiary-fixed-dim": "#eec200",
+                    "surface-container-highest": "#dae2fd",
+                    "primary-container": "#22c55e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#131b2e",
+                    "outline-variant": "#bccbb9",
+                    "on-background": "#131b2e",
+                    "on-secondary": "#ffffff",
+                    "primary": "#006e2f",
+                    "on-secondary-fixed": "#002117",
+                    "outline": "#6d7b6c",
+                    "on-secondary-container": "#306d58",
+                    "background": "#faf8ff",
+                    "tertiary-container": "#cfa800",
+                    "on-secondary-fixed-variant": "#0b513d",
+                    "surface-container-high": "#e2e7ff",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#002109",
+                    "on-error-container": "#93000a",
+                    "surface": "#faf8ff",
+                    "primary-fixed": "#6bff8f",
+                    "inverse-on-surface": "#eef0ff",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "on-tertiary-fixed": "#231b00",
+                    "inverse-surface": "#283044",
+                    "secondary-fixed-dim": "#95d3ba",
+                    "primary-fixed-dim": "#4ae176",
+                    "on-surface-variant": "#3d4a3d",
+                    "surface-container": "#eaedff",
+                    "surface-bright": "#faf8ff",
+                    "secondary": "#2b6954",
+                    "on-primary-container": "#004b1e",
+                    "surface-dim": "#d2d9f4",
+                    "secondary-fixed": "#b0f0d6",
+                    "tertiary": "#735c00",
+                    "surface-variant": "#dae2fd",
+                    "surface-tint": "#006e2f",
+                    "on-tertiary-container": "#4f3e00",
+                    "secondary-container": "#adedd3",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-gap-lg": "2rem",
+                    "gutter-grid": "1rem",
+                    "touch-target-min": "3.5rem",
+                    "margin-main": "1.5rem",
+                    "stack-gap-md": "1rem",
+                    "stack-gap-sm": "0.5rem"
+            },
+            "fontFamily": {
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-sm": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "label-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "800"}],
+                    "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "headline-sm": ["20px", {"lineHeight": "26px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hard-shadow {
+            box-shadow: 4px 4px 0px 0px #0F172A;
+        }
+        .hard-shadow-primary {
+            box-shadow: 4px 4px 0px 0px #22C55E;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- Top Navigation Bar (Shared Component Reference) -->
+<header class="bg-white dark:bg-slate-950 border-b-2 border-slate-900 flex justify-between items-center w-full px-6 h-[72px] sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-green-600" data-icon="shield_person">shield_person</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-extrabold tracking-tight uppercase text-2xl text-slate-900">Agent Terrain</h1>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-slate-900" data-icon="help_center">help_center</span>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center p-6 md:p-margin-main">
+<div class="w-full max-w-md">
+<!-- Hero Image / Visual Anchor -->
+<div class="mb-stack-gap-lg overflow-hidden border-2 border-slate-900 rounded-lg hard-shadow h-48 bg-slate-200">
+<img alt="Healthcare professional in the field" class="w-full h-full object-cover" data-alt="A cinematic, high-contrast shot of a modern healthcare worker in a bright, sunlit outdoor setting in Guinea, holding a rugged digital tablet. The scene is illuminated by intense, clear natural lighting, emphasizing the vibrant green of the surrounding landscape and the authoritative, energetic mood of the professional environment. The visual style is crisp and resilient, mirroring a modern corporate aesthetic with bold, saturated colors and deep, high-contrast shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpZm3bXd5AB5hfzNvsB86ae-NNc2OJbVyPG-MKCpfYJMiynKtLYCkZJB2RdzQjgU92Qw_AMqaxlPHeZqxG0A4tcctqCRNQplEvuqrquTN660bxJ_UVit0_pLa4YhbieTxiID9Ncd6Md0nJGh3fppir_cMztil_RnORJNzujLi0D4ffhf2kbjImVgODKsKsPV2dRJoDW7qs8mG6oC864TyFKGjuVIhWl2dL4kj5KcWoMiYhTv3G9Ltztq1RPgEbGFdkymdlztrnPl0"/>
+</div>
+<!-- Login Container -->
+<div class="bg-white border-2 border-slate-900 p-8 rounded-none flex flex-col gap-stack-gap-md relative">
+<div class="flex flex-col gap-stack-gap-sm mb-4">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Secure Access</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Enter your credentials to access the terrain data network.</p>
+</div>
+<!-- Form Fields -->
+<form class="flex flex-col gap-stack-gap-md">
+<!-- Agent ID Field -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface" for="agent-id">Agent ID</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-900" data-icon="badge">badge</span>
+</div>
+<input class="block w-full h-touch-target-min pl-12 pr-4 bg-white border-2 border-slate-900 text-on-surface font-body-md focus:border-primary-container focus:ring-0 placeholder:text-on-surface-variant/60" id="agent-id" name="agent-id" placeholder="AT-XXXX-XX" type="text"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface" for="password">Security Password</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-900" data-icon="lock">lock</span>
+</div>
+<input class="block w-full h-touch-target-min pl-12 pr-4 bg-white border-2 border-slate-900 text-on-surface font-body-md focus:border-primary-container focus:ring-0 placeholder:text-on-surface-variant/60" id="password" name="password" placeholder="••••••••" type="password"/>
+<div class="absolute inset-y-0 right-0 pr-4 flex items-center">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="visibility">visibility</span>
+</div>
+</div>
+</div>
+<!-- Login Button -->
+<a class="mt-4 w-full h-touch-target-min bg-primary-container text-on-surface font-headline-sm uppercase tracking-wider border-2 border-slate-900 hard-shadow-primary active:translate-x-1 active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2" href="{{DATA:SCREEN:SCREEN_8}}">
+                        Login
+                        <span class="material-symbols-outlined" data-icon="login">login</span>
+</a>
+<!-- Forgot Password Link -->
+<div class="flex justify-center mt-2">
+<a class="font-label-lg text-label-lg text-primary hover:underline underline-offset-4 flex items-center gap-1" href="#">
+                            Forgot Password?
+                            <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</form>
+<!-- Urgent Sync Alert Area (Brand Secondary) -->
+<div class="mt-stack-gap-md p-4 bg-on-surface text-white border-2 border-slate-900 flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="info" data-weight="fill" style="font-variation-settings: 'FILL' 1;">info</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary-container">System Notice</h4>
+<p class="text-[12px] leading-tight opacity-90 mt-1 uppercase tracking-wider">Ensure device encryption is enabled before biometric sync.</p>
+</div>
+</div>
+</div>
+<!-- Meta Information -->
+<div class="mt-stack-gap-lg text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant/70">
+                    V 4.2.0-STABLE | REGION: CONAKRY, GN
+                </p>
+<div class="flex justify-center gap-4 mt-2">
+<span class="material-symbols-outlined text-primary" data-icon="encrypted">encrypted</span>
+<span class="material-symbols-outlined text-primary" data-icon="offline_pin">offline_pin</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Urgent Action Bar (Static for Login context) -->
+<footer class="h-12 bg-on-surface text-white flex items-center justify-center px-6 fixed bottom-0 w-full z-10">
+<p class="font-label-sm text-label-sm uppercase tracking-[0.2em]">Authorized Field Access Only</p>
+</footer>
+</body></html>

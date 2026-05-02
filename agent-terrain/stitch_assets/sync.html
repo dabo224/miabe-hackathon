@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#4ae176",
+                    "surface-container-low": "#f2f3ff",
+                    "on-primary-fixed-variant": "#005321",
+                    "tertiary-fixed": "#ffe083",
+                    "tertiary-fixed-dim": "#eec200",
+                    "surface-container-highest": "#dae2fd",
+                    "primary-container": "#22c55e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#131b2e",
+                    "outline-variant": "#bccbb9",
+                    "on-background": "#131b2e",
+                    "on-secondary": "#ffffff",
+                    "primary": "#006e2f",
+                    "on-secondary-fixed": "#002117",
+                    "outline": "#6d7b6c",
+                    "on-secondary-container": "#306d58",
+                    "background": "#faf8ff",
+                    "tertiary-container": "#cfa800",
+                    "on-secondary-fixed-variant": "#0b513d",
+                    "surface-container-high": "#e2e7ff",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#002109",
+                    "on-error-container": "#93000a",
+                    "surface": "#faf8ff",
+                    "primary-fixed": "#6bff8f",
+                    "inverse-on-surface": "#eef0ff",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "on-tertiary-fixed": "#231b00",
+                    "inverse-surface": "#283044",
+                    "secondary-fixed-dim": "#95d3ba",
+                    "primary-fixed-dim": "#4ae176",
+                    "on-surface-variant": "#3d4a3d",
+                    "surface-container": "#eaedff",
+                    "surface-bright": "#faf8ff",
+                    "secondary": "#2b6954",
+                    "on-primary-container": "#004b1e",
+                    "surface-dim": "#d2d9f4",
+                    "secondary-fixed": "#b0f0d6",
+                    "tertiary": "#735c00",
+                    "surface-variant": "#dae2fd",
+                    "surface-tint": "#006e2f",
+                    "on-tertiary-container": "#4f3e00",
+                    "secondary-container": "#adedd3",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-gap-lg": "2rem",
+                    "gutter-grid": "1rem",
+                    "touch-target-min": "3.5rem",
+                    "margin-main": "1.5rem",
+                    "stack-gap-md": "1rem",
+                    "stack-gap-sm": "0.5rem"
+            },
+            "fontFamily": {
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-sm": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "label-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "800"}],
+                    "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "headline-sm": ["20px", {"lineHeight": "26px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #faf8ff;
+            color: #131b2e;
+        }
+        .hard-shadow {
+            box-shadow: 4px 4px 0px 0px #0F172A;
+        }
+        .inner-progress-glow {
+            box-shadow: inset 0 0 12px rgba(34, 197, 94, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body-md text-body-md min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-slate-950 flex justify-between items-center w-full px-6 h-[72px] docked full-width top-0 border-b-2 border-slate-900 dark:border-slate-100 sticky z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-900 dark:text-white cursor-pointer" data-icon="menu">menu</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-extrabold tracking-tight uppercase text-2xl font-black text-slate-900 dark:text-white">Agent Terrain</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-600 dark:text-green-500 text-2xl" data-icon="cloud_sync">cloud_sync</span>
+</div>
+</header>
+<main class="px-6 py-8 max-w-md mx-auto space-y-stack-gap-lg">
+<!-- Hero Sync Status Section -->
+<section class="space-y-stack-gap-md">
+<div class="bg-white border-2 border-slate-900 p-6 rounded-none relative overflow-hidden">
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="font-label-sm text-label-sm text-slate-500 uppercase">Current Status</p>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Synchronizing...</h2>
+</div>
+<span class="font-headline-lg text-headline-lg text-primary-container">65%</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-10 bg-slate-100 border-2 border-slate-900 rounded-none overflow-hidden relative">
+<div class="h-full bg-primary-container transition-all duration-500 w-[65%] border-r-2 border-slate-900 inner-progress-glow"></div>
+</div>
+<p class="mt-4 font-body-md text-slate-600 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container animate-spin" data-icon="sync" style="font-size: 18px;">sync</span>
+                    Uploading 12 of 18 records to Conakry HQ
+                </p>
+</div>
+<!-- Start Sync Button -->
+<button class="w-full bg-primary-container text-on-surface font-headline-sm text-headline-sm h-touch-target-min border-2 border-slate-900 hard-shadow active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" data-icon="cloud_upload" data-weight="fill" style="font-variation-settings: 'FILL' 1;">cloud_upload</span>
+                Start Sync
+            </button>
+</section>
+<!-- Records List Section -->
+<section class="space-y-stack-gap-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Queue Management</h3>
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 font-label-sm text-label-sm border border-slate-900">Priority: High</span>
+</div>
+<!-- Record Items -->
+<div class="space-y-4">
+<!-- Pending Records Group -->
+<div class="space-y-2">
+<p class="font-label-sm text-label-sm text-slate-500">PENDING (6)</p>
+<div class="bg-white border-2 border-slate-900 p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-slate-100 border-2 border-slate-900 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-400" data-icon="pending">pending</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg">Patient AT-9921</h4>
+<p class="text-xs text-slate-500">Vital signs • 2.4 MB</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400" data-icon="schedule">schedule</span>
+</div>
+<div class="bg-white border-2 border-slate-900 p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-slate-100 border-2 border-slate-900 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-400" data-icon="pending">pending</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg">Lab Report LK-02</h4>
+<p class="text-xs text-slate-500">Diagnostic image • 8.1 MB</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400" data-icon="schedule">schedule</span>
+</div>
+</div>
+<!-- Synchronized Records Group -->
+<div class="space-y-2">
+<p class="font-label-sm text-label-sm text-slate-500">SYNCHRONIZED (12)</p>
+<div class="bg-white border-2 border-slate-900 p-4 flex items-center justify-between opacity-80">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container/20 border-2 border-slate-900 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg">Inventory Update</h4>
+<p class="text-xs text-slate-500">Meds tracking • 142 KB</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="done_all">done_all</span>
+</div>
+<div class="bg-white border-2 border-slate-900 p-4 flex items-center justify-between opacity-80">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container/20 border-2 border-slate-900 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg">Patient AT-9918</h4>
+<p class="text-xs text-slate-500">Discharge summary • 1.1 MB</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="done_all">done_all</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Connectivity Visual -->
+<div class="border-2 border-slate-900 rounded-none overflow-hidden h-48 relative">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="A high-contrast black and white photograph of a rugged telecommunications tower standing against a bright, clear sky in a rural Guinean landscape. The lighting is harsh and direct, emphasizing the metallic structure's geometric patterns. The overall aesthetic is one of resilient technology operating in a demanding natural environment, consistent with the Agent Terrain brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBea3LqPlgZ1IFEOtrAW2sOgiv4_TBtGeCaHhEZX08ztjuq2pX7RshF2zaDdHdlsyoFwTt77ffmwoTzsOVuhbDTZ0V74bMt-6BYRA7n6wUkaRTwyK2FoxLbQJgfIOcuLgap4NchGIXalv41XdyfmU35CGtNbVPkpOE-n5Kvlrz2NhDBc2yKw3G5MbnlmWtvR5OTobyt345lhVuA5R26hrjpOf4G-Jr1sJgbYhn3-C5flS4Q63GwjLxZudjtqSsJjI65v1xZUeyAEsI"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+<div class="absolute bottom-4 left-4 bg-slate-900 text-white p-3 border-2 border-green-500">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-400" data-icon="signal_cellular_alt">signal_cellular_alt</span>
+<p class="font-label-sm text-label-sm">Strong Satellite Link</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-[80px] flex justify-around items-stretch bg-white dark:bg-slate-900 border-t-4 border-slate-900 dark:border-slate-100 shadow-[0_-4px_0_0_rgba(15,23,42,1)] z-50">
+<a class="flex flex-col items-center justify-center text-slate-900 dark:text-white opacity-80 hover:bg-slate-100 dark:hover:bg-slate-800 flex-1" href="{{DATA:SCREEN:SCREEN_8}}">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[12px]">Tasks</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-900 dark:text-white opacity-80 hover:bg-slate-100 dark:hover:bg-slate-800 flex-1" href="#">
+<span class="material-symbols-outlined" data-icon="folder_shared">folder_shared</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[12px]">Records</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-green-500 text-slate-900 rounded-none h-full scale-105 border-x-2 border-slate-900 flex-1 transform translate-y-[-2px] transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="sync_lock" data-weight="fill" style="font-variation-settings: 'FILL' 1;">sync_lock</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[12px]">Sync</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-900 dark:text-white opacity-80 hover:bg-slate-100 dark:hover:bg-slate-800 flex-1" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[12px]">Profile</span>
+</a>
+</nav>
+</body></html>

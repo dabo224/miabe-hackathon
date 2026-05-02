@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface;
+  }
+}
+
+.signature-texture {
+  background: linear-gradient(135deg, #006a40 0%, #008653 100%);
+}
+
+.vital-gradient {
+  background: linear-gradient(135deg, #006a40 0%, #008653 100%);
+}
+
+.glass-panel {
+  background: rgba(225, 227, 228, 0.7);
+  backdrop-filter: blur(20px);
+}
